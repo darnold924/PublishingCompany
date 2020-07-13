@@ -1,0 +1,71 @@
+﻿
+@model   AuthorVM.Author
+
+<!DOCTYPE html>
+
+<style type="text/css">
+    .editor-field > label {
+        float: left;
+        width: 150px;
+    }
+
+    .txtbox {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        background: white;
+        color: black;
+        cursor: text;
+        border-bottom: 1px solid #104A7B;
+        border-right: 1px solid #104A7B;
+        border-left: 1px solid #104A7B;
+        border-top: 1px solid #104A7B;
+        padding-top: 10px;
+    }
+</style>
+<html>
+<head>
+    <title>Edit</title>
+</head>
+
+<body>
+    <h1>Author</h1>
+
+    @using (Html.BeginForm())
+    {
+
+        @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+
+        <fieldset>
+
+            <legend>Edit</legend>
+
+            @Html.HiddenFor(model => model.AuthorID)
+
+            <div class="editor-field">
+                @Html.Label("First Name:")
+                @Html.TextBoxFor(model => model.FirstName, new { @Cssclass = "txtbox" })
+                @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })
+            </div>
+            <br />
+            <div class="editor-field">
+                @Html.Label("Last Name:")
+                @Html.TextBoxFor(model => model.LastName, new { @Cssclass = "txtbox" })
+                @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger" })
+            </div>
+            <br />
+            <p>
+                <input type="submit" name="submit" value="Save" />
+                <input type="submit" name="submit" value="Cancel" />
+            </p>
+
+        </fieldset>
+    }
+
+</body>
+</html>
+
+
+
+
+
+

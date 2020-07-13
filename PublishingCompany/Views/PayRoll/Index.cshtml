@@ -1,0 +1,52 @@
+﻿@model PayRollVM
+
+@{
+    ViewData["Title"] = "PayRoll Page";
+}
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Payrolls</title>
+</head>
+<body>
+    <h1>Payrolls</h1>
+
+    <form method="post">
+
+        @Html.ActionLink("Create", "Create")
+        @Html.ActionLink("Cancel", "Cancel")
+
+        <br /><br />
+        <table border="1" cellpadding="10">
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th colspan="4">Actions</th>
+            </tr>
+            @foreach (var item in Model.Payrolls)
+            {
+                <tr>
+                    <td>@item.AuthorFirstName</td>
+                    <td>@item.AuthorLastName</td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.PayrollId })
+                    </td>
+                    <td>
+                        @Html.ActionLink("Detail", "Detail", new { id = item.PayrollId })
+                    </td>
+
+                    <td>
+                        @Html.ActionLink("Delete", "Delete", new { id = item.PayrollId },
+                                      new { onclick = "return confirm('Are you sure you wish to delete this payroll?');" })
+                    </td>
+
+                </tr>
+            }
+        </table>
+    </form>
+</body>
+</html>

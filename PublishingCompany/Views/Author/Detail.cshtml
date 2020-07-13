@@ -1,0 +1,46 @@
+﻿@model AuthorVM.Author
+
+<!DOCTYPE html>
+
+<style type="text/css">
+    .editor-field > label {
+        float: left;
+        width: 150px;
+    }
+</style>
+<html>
+<head>
+    <title>Author Detail</title>
+</head>
+
+<body>
+    <h1>Author</h1>
+
+    @using (Html.BeginForm())
+    {
+
+        <fieldset>
+
+            <legend>Detail</legend>
+
+            @Html.HiddenFor(model => model.AuthorID)
+
+            <div class="form-group">
+                <div class="editor-field">
+                    @Html.Label("First Name:")
+                    @Html.DisplayTextFor(model => model.FirstName)
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="editor-field">
+                    @Html.Label("Last Name:")
+                    @Html.DisplayTextFor(model => model.LastName)
+                </div>
+            </div>
+
+        </fieldset>
+    }
+
+</body>
+</html>

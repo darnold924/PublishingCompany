@@ -1,0 +1,55 @@
+﻿@model PayRollVM.Payroll
+
+<!DOCTYPE html>
+
+<style type="text/css">
+    .editor-field > label {
+        float: left;
+        width: 150px;
+    }
+</style>
+<html>
+<head>
+    <title>PayRoll Detail</title>
+</head>
+
+<body>
+    <h1>PayRoll</h1>
+
+    @using (Html.BeginForm())
+    {
+
+<fieldset>
+
+    <legend>Author Payroll Detail</legend>
+
+    @Html.HiddenFor(model => model.PayrollId)
+    @Html.HiddenFor(model => model.AuthorId)
+
+    <div class="form-group">
+        <div class="editor-field">
+            @Html.Label("First Name:")
+            @Html.DisplayTextFor(model => model.AuthorFirstName)
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="editor-field">
+            @Html.Label("Last Name:")
+            @Html.DisplayTextFor(model => model.AuthorLastName)
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="editor-field">
+            @Html.Label("Salary:")
+            @Html.DisplayTextFor(model => model.Salary)
+        </div>
+    </div>
+
+
+</fieldset>
+    }
+
+</body>
+</html>

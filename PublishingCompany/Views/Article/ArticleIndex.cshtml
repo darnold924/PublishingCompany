@@ -1,0 +1,50 @@
+﻿
+@model ArticleVM
+@{
+    ViewData["Title"] = "Article Page";
+}
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Authors</title>
+</head>
+<body>
+<h1>Articles</h1>
+
+<form method="post">
+
+    @Html.ActionLink("Create", "Create")
+    @Html.ActionLink("Cancel", "Cancel")
+
+    <br /><br />
+    Author: @Model.Articles[0].AuthorName
+
+    <table border="1" cellpadding="10">
+        <tr>
+            <th>Title</th>
+            <th colspan="4">Actions</th>
+        </tr>
+        @foreach (var item in Model.Articles)
+        {
+        <tr>
+            <td>@item.Title</td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new {id = item.ArticleId, authid = item.AuthorId})
+            </td>
+            <td>
+                @Html.ActionLink("Delete", "Delete", new {id = item.ArticleId},
+                    new {onclick = "return confirm('Are you sure you wish to delete this article?');"})
+            </td>
+
+        </tr>
+        }
+    </table>
+</form>
+</body>
+</html>
+
+

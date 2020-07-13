@@ -1,0 +1,70 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29009.5
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PublishingCompany", "PublishingCompany\PublishingCompany.csproj", "{855B6D27-46E1-4622-918D-294521642D95}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DAL", "DAL\DAL.csproj", "{28B0A29E-6DF9-4A67-9852-D7F09E47BFFE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entities", "Entities\Entities.csproj", "{D1EF1346-28D5-4F7A-99A7-B51C13057E18}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAPI", "WebAPI\WebAPI.csproj", "{163BFDC6-BF73-4926-A7FD-076EEAF7F502}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceLayer", "ServiceLayer\ServiceLayer.csproj", "{FA45B291-1522-4ABF-9188-F46E8696365E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{855B6D27-46E1-4622-918D-294521642D95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{855B6D27-46E1-4622-918D-294521642D95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{855B6D27-46E1-4622-918D-294521642D95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{855B6D27-46E1-4622-918D-294521642D95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28B0A29E-6DF9-4A67-9852-D7F09E47BFFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28B0A29E-6DF9-4A67-9852-D7F09E47BFFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28B0A29E-6DF9-4A67-9852-D7F09E47BFFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28B0A29E-6DF9-4A67-9852-D7F09E47BFFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1EF1346-28D5-4F7A-99A7-B51C13057E18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1EF1346-28D5-4F7A-99A7-B51C13057E18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1EF1346-28D5-4F7A-99A7-B51C13057E18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1EF1346-28D5-4F7A-99A7-B51C13057E18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{163BFDC6-BF73-4926-A7FD-076EEAF7F502}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{163BFDC6-BF73-4926-A7FD-076EEAF7F502}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{163BFDC6-BF73-4926-A7FD-076EEAF7F502}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{163BFDC6-BF73-4926-A7FD-076EEAF7F502}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA45B291-1522-4ABF-9188-F46E8696365E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA45B291-1522-4ABF-9188-F46E8696365E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA45B291-1522-4ABF-9188-F46E8696365E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA45B291-1522-4ABF-9188-F46E8696365E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {843C5216-A984-4BB8-BBA9-38071E425EE5}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 6
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://darnold924x.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = DAL\\DAL.csproj
+		SccProjectName1 = DAL
+		SccLocalPath1 = DAL
+		SccProjectUniqueName2 = PublishingCompany\\PublishingCompany.csproj
+		SccProjectName2 = PublishingCompany
+		SccLocalPath2 = PublishingCompany
+		SccProjectUniqueName3 = Entities\\Entities.csproj
+		SccProjectName3 = Entities
+		SccLocalPath3 = Entities
+		SccProjectUniqueName4 = WebAPI\\WebAPI.csproj
+		SccProjectName4 = WebAPI
+		SccLocalPath4 = WebAPI
+		SccProjectUniqueName5 = ServiceLayer\\ServiceLayer.csproj
+		SccProjectName5 = ServiceLayer
+		SccLocalPath5 = ServiceLayer
+	EndGlobalSection
+EndGlobal

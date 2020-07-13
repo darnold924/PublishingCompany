@@ -1,0 +1,71 @@
+﻿@model ArticleVM.Article
+
+<!DOCTYPE html>
+
+<style type="text/css">
+    .editor-field > label {
+        float: left;
+        width: 150px;
+    }
+
+    txtbox {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        background: white;
+        color: black;
+        cursor: text;
+        border-bottom: 1px solid #104A7B;
+        border-right: 1px solid #104A7B;
+        border-left: 1px solid #104A7B;
+        border-top: 1px solid #104A7B;
+        padding-top: 10px;
+    }
+
+    textarea {
+        width: 500px;
+        height: 75px;
+    }
+</style>
+
+<html>
+<head>
+    <title>Create</title>
+</head>
+
+<body>
+    <h1>Article</h1>
+
+    @using (Html.BeginForm())
+    {
+        @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+
+<fieldset>
+
+    <legend>Create</legend>
+    @Html.HiddenFor(model => model.AuthorId)
+
+    <div class="editor-field">
+        @Html.Label("Title:")
+        @Html.TextBoxFor(model => model.Title, new { @Cssclass = "txtbox" })
+        @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger" })
+    </div>
+    <br />
+    <div class="editor-field">
+        @Html.Label("Body:")
+        @Html.TextAreaFor(model => model.Body)
+    </div>
+    <br />
+    <br />
+    <p>
+        <input type="submit" name="submit" value="Save" />
+        <input type="submit" name="submit" value="Cancel" />
+    </p>
+
+</fieldset>
+    }
+
+</body>
+</html>
+
+
+
